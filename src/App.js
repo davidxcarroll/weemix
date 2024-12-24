@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { generateLyrics } from './utils/lyricGenerators';
 import { songTemplates } from './data/songData';
 import './App.css';
 
 const WeemixApp = () => {
-  const [topic, setTopic] = useState('topicRandom');
+  const [topic, setTopic] = useState('topicAnything');
   const [tune, setTune] = useState('tuneFrere');
   const [currentLyrics, setCurrentLyrics] = useState([]);
+
+  useEffect(() => {
+    mix();
+  }, [topic, tune]);
 
   const getDisplayName = (value) => {
     if (value.startsWith('topic')) {
@@ -20,35 +24,29 @@ const WeemixApp = () => {
   };
 
   const mix = () => {
-    // Convert topic from 'topicAnimals' to just 'animals'
     const themeKey = topic.replace('topic', '').toLowerCase();
-    // If random is selected, pick a random theme
-    const theme = themeKey === 'random' 
-      ? ['animals', 'starwars', 'food'][Math.floor(Math.random() * 3)]
-      : themeKey;
-    
-    const newLyrics = generateLyrics(tune, theme);
+    const newLyrics = generateLyrics(tune, themeKey);
     setCurrentLyrics(newLyrics);
   };
 
   return (
-    <div className="flex md:flex-row flex-col-reverse w-screen h-screen bg-amber-50 pangram-sans-rounded-extrabold uppercase overflow-y-auto">
+    <div className="flex md:flex-col flex-col-reverse w-screen h-[100dvh] min-h-[-webkit-fill-available] bg-white dark:bg-black font-pangram uppercase overflow-y-auto">
 
-      <div className="flex flex-col md:gap-4 gap-1 md:w-1/3 w-full md:p-4 p-2 text-amber-50 md:text-2xl text-xl bg-red-500 md:h-full overflow-y-auto">
+      <div className="flex flex-row flex-wrap md:gap-2 gap-1 justify-center items-center w-full md:p-4 p-2 text-white dark:text-black md:text-2xl text-base max-md:px-0 bg-red-500 overflow-y-auto">
         
         <label className="md:leading-6 leading-5 text-center">a song about</label>
 
-        <div className="relative flex-1 min-h-16">
-          <div className="absolute inset-0 flex items-center justify-center rounded-3xl border-2 border-amber-50 md:p-4 p-1 cursor-pointer">
-            <span className="md:leading-6 leading-5 text-center">{getDisplayName(topic)}</span>
-            <span className="material-symbols-rounded text-4xl">keyboard_arrow_down</span>
+        <div className="relative">
+          <div className="flex items-center justify-center rounded-3xl border-2 border-white dark:border-black pl-4 pr-2 py-1 cursor-pointer">
+            <span className="md:leading-6 leading-5 text-center line-clamp-1">{getDisplayName(topic)}</span>
+            <span className="material-symbols-rounded md:!text-3xl !text-xl">keyboard_arrow_down</span>
           </div>
           <select 
             className="absolute inset-0 opacity-0 cursor-pointer w-full"
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
           >
-            <option value="topicRandom">Random</option>
+            <option value="topicAnything">Anything</option>
             <option value="topicAnimals">Animals</option>
             <option value="topicStarWars">Star Wars</option>
             <option value="topicFood">Food</option>
@@ -57,10 +55,10 @@ const WeemixApp = () => {
 
         <label className="md:leading-6 leading-5 text-center">to the tune of</label>
         
-        <div className="relative flex-1 min-h-16">
-          <div className="absolute inset-0 flex items-center justify-center rounded-3xl border-2 border-amber-50 md:p-4 p-1 cursor-pointer">
-            <span className="md:leading-6 leading-5 text-center">{getDisplayName(tune)}</span>
-            <span className="material-symbols-rounded text-4xl">keyboard_arrow_down</span>
+        <div className="relative">
+          <div className="flex items-center justify-center rounded-3xl border-2 border-white dark:border-black pl-4 pr-2 py-1 cursor-pointer">
+            <span className="md:leading-6 leading-5 text-center line-clamp-1">{getDisplayName(tune)}</span>
+            <span className="material-symbols-rounded md:!text-3xl !text-xl">keyboard_arrow_down</span>
           </div>
           <select 
             className="absolute inset-0 opacity-0 cursor-pointer w-full"
@@ -73,18 +71,18 @@ const WeemixApp = () => {
           </select>
         </div>
 
-        <div className="relative flex-1 min-h-16">
-          <div className="absolute inset-0 flex items-center justify-center rounded-3xl border-2 border-amber-50 max-md:mt-4 md:p-4 p-1 cursor-pointer" onClick={mix}>
-            <h1 className="text-center">Weemix</h1>
-            <span className="material-symbols-rounded text-4xl">autorenew</span>
+          <div className="flex items-center justify-center max-h-10 rounded-3xl border-2 border-white dark:border-black px-2 py-1 cursor-pointer" onClick={mix}>
+            <span className="material-symbols-rounded md:!text-3xl !text-xl">autorenew</span>
           </div>
-        </div>
 
       </div>
 
-      <div className="lyrics flex flex-1 flex-col justify-evenly md:w-2/3 w-full md:p-8 p-2 md:text-4xl text-2xl text-red-500 overflow-y-auto">
+      <div className="
+        lyrics flex flex-1 flex-col justify-evenly w-full md:p-8 p-2 text-red-500 overflow-y-auto
+        xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-2xl
+      ">
         {currentLyrics.map((line, index) => (
-          <p key={index} className="w-full text-center leading-relaxed">{line}</p>
+          <p key={index} className="w-full text-center">{line}</p>
         ))}
       </div>
 

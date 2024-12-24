@@ -1,14 +1,22 @@
 import { songTemplates, wordCollections } from '../data/songData';
 
 export const getRandomWord = (theme, syllableCount) => {
-  // If theme is random, pick a random theme
-  const actualTheme = theme === 'random' 
-    ? Object.keys(wordCollections).filter(t => t !== 'random')[Math.floor(Math.random() * (Object.keys(wordCollections).length - 1))]
-    : theme;
+  if (theme === 'anything') {
+    // Collect all words with matching syllable count from all categories
+    const allWords = ['animals', 'starwars', 'food']
+      .map(category => wordCollections[category][syllableCount] || [])
+      .flat();
 
-  const themeWords = wordCollections[actualTheme];
+    // Return a random word from the combined array
+    return allWords.length > 0 
+      ? allWords[Math.floor(Math.random() * allWords.length)]
+      : `[${syllableCount}-syllable word]`;
+  }
+
+  // Original behavior for specific themes
+  const themeWords = wordCollections[theme];
   if (!themeWords || !themeWords[syllableCount]) {
-    return `[${syllableCount}-syllable ${actualTheme} word]`;
+    return `[${syllableCount}-syllable ${theme} word]`;
   }
   const words = themeWords[syllableCount];
   return words[Math.floor(Math.random() * words.length)];
