@@ -300,13 +300,13 @@ export const songTemplates = {
     },
     sports: {
       1: [
-        "ball", "bat", "goal", "run", "kick", "throw", "catch", "pass", "shot", "score", "team", "game", "pitch", "hit", "serve", "spike", "swim", "race", "jump", "dive"
+        "ball", "bat", "goal", "run", "kick", "throw", "Babe", "catch", "pass", "shot", "score", "team", "game", "pitch", "hit", "serve", "spike", "swim", "race", "jump", "dive"
       ],
       2: [
-        "baseball", "football", "soccer", "tennis", "rugby", "cricket", "hockey", "basket", "player", "runner", "pitcher", "catcher", "goalie", "tackle", "touchdown"
+        "baseball", "football", "soccer", "tennis", "pick-6", "rugby", "dribble", "Jordan", "red-card", "Gretzky", "hockey", "player", "pitcher", "catcher", "goalie", "tackle", "touchdown"
       ],
       3: [
-        "volleyball", "gymnastics", "alley-oop", "marathon", "badminton", "basketball", "referee", "umpire", "penalty", "victory", "tournament", "champion", "stadium", "uniform"
+        "volleyball", "gymnastics", "alley-oop", "marathon", "crossover", "penalty", "yellow-card", "badminton", "basketball", "referee", "umpire", "penalty", "victory", "tournament", "champion", "stadium", "uniform"
       ],
       4: [
         "competition", "waterpolo", "interception"
@@ -314,10 +314,10 @@ export const songTemplates = {
     },
     christmas: {
       1: [
-        "bell", "star", "gift", "tree", "snow", "wreath", "light", "joy", "peace", "Bing", "hearth", "song", "cheer", "warmth", "child", "feast", "wish", "hope", "love", "elf"
+        "bell", "star", "gift", "Grinch", "tree", "snow", "wreath", "light", "joy", "peace", "Bing", "hearth", "song", "cheer", "warmth", "child", "feast", "wish", "hope", "love", "elf"
       ],
       2: [
-        "present", "garland", "tinsel", "carol", "winter", "holly", "Frappy", "snowflake", "frosty", "manger", "Jesus", "stockings", "jingle", "candy", "Mary", "Joseph", "sugar", "cookies", "festive", "blessing", "Christmas", "snowman", "reindeer", "Santa"
+        "present", "garland", "tinsel", "Whoville" "carol", "winter", "holly", "Frappy", "snowflake", "frosty", "manger", "Jesus", "stockings", "jingle", "candy", "Mary", "Joseph", "sugar", "cookies", "festive", "blessing", "Christmas", "snowman", "reindeer", "Santa"
       ],
       3: [
         "ornament", "evergreen", "holiday", "mistletoe", "bethlehem", "gingerbread", "wonderful", "caroling", "celebrate", "peppermint", "candycane", "Frankincense"
