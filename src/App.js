@@ -34,7 +34,7 @@ const WeemixApp = () => {
 
       <div className="flex flex-row flex-wrap md:gap-2 gap-1 justify-center items-center w-full md:p-4 p-2 text-white dark:text-black md:text-2xl text-base max-md:px-0 bg-red-500 overflow-y-auto">
         
-        <label className="md:leading-6 leading-5 text-center">a song about</label>
+        <label className="md:leading-6 leading-5 text-center">Sing about</label>
 
         <div className="relative">
           <div className="flex items-center justify-center rounded-3xl border-2 border-white dark:border-black pl-4 pr-2 py-1 cursor-pointer">
@@ -48,8 +48,10 @@ const WeemixApp = () => {
           >
             <option value="topicAnything">Anything</option>
             <option value="topicAnimals">Animals</option>
-            <option value="topicStarWars">Star Wars</option>
+            <option value="topicSports">Sports</option>
             <option value="topicFood">Food</option>
+            <option value="topicStarWars">Star Wars</option>
+            <option value="topicChristmas">Christmas</option>
           </select>
         </div>
 
@@ -66,8 +68,10 @@ const WeemixApp = () => {
             onChange={(e) => setTune(e.target.value)}
           >
             <option value="tuneFrere">Frère Jacques</option>
+            <option value="tuneTwinkle">Twinkle Twinkle Little Star</option>
             <option value="tuneRow">Row Row Row Your Boat</option>
             <option value="tuneMary">Mary Had a Little Lamb</option>
+            <option value="tuneJingle">Jingle Bells</option>
           </select>
         </div>
 
@@ -78,7 +82,7 @@ const WeemixApp = () => {
       </div>
 
       <div className="
-        lyrics flex flex-1 flex-col justify-evenly w-full md:p-8 p-2 text-red-500 overflow-y-auto
+        lyrics flex flex-1 flex-col justify-evenly w-full md:p-8 p-2 text-green-600 dark:text-green-500 overflow-y-auto
         xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-2xl
       ">
         {currentLyrics.map((line, index) => (
