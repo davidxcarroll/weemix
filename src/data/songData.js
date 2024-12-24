@@ -317,7 +317,7 @@ export const songTemplates = {
         "bell", "star", "gift", "tree", "snow", "wreath", "light", "joy", "peace", "Bing", "hearth", "song", "cheer", "warmth", "child", "feast", "wish", "hope", "love", "elf"
       ],
       2: [
-        "present", "garland", "tinsel", "carol", "winter", "holly", "snowflake", "frosty", "manger", "Jesus", "stockings", "jingle", "candy", "Mary", "Joseph", "sugar", "cookies", "festive", "blessing", "Christmas", "snowman", "reindeer", "Santa"
+        "present", "garland", "tinsel", "carol", "winter", "holly", "Frappy", "snowflake", "frosty", "manger", "Jesus", "stockings", "jingle", "candy", "Mary", "Joseph", "sugar", "cookies", "festive", "blessing", "Christmas", "snowman", "reindeer", "Santa"
       ],
       3: [
         "ornament", "evergreen", "holiday", "mistletoe", "bethlehem", "gingerbread", "wonderful", "caroling", "celebrate", "peppermint", "candycane", "Frankincense"
