@@ -46,13 +46,13 @@ const WeemixApp = () => {
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
           >
-            <option value="topicAnything">Anything</option>
-            <option value="topicAnimals">Animals</option>
-            <option value="topicSports">Sports</option>
-            <option value="topicFood">Food</option>
-            <option value="topicOffice">The Office</option>
-            <option value="topicStarWars">Star Wars</option>
-            <option value="topicChristmas">Christmas</option>
+            <option value="topicAnything">👹 Anything</option>
+            <option value="topicAnimals">🐶 Animals</option>
+            <option value="topicSports">⚽️ Sports</option>
+            <option value="topicFood">🍔 Food</option>
+            <option value="topicOffice">📄 The Office</option>
+            <option value="topicStarWars">🪐 Star Wars</option>
+            <option value="topicChristmas">🎄 Christmas</option>
           </select>
         </div>
 
@@ -68,11 +68,11 @@ const WeemixApp = () => {
             value={tune}
             onChange={(e) => setTune(e.target.value)}
           >
-            <option value="tuneFrere">Frère Jacques</option>
-            <option value="tuneTwinkle">Twinkle Twinkle Little Star</option>
-            <option value="tuneRow">Row Row Row Your Boat</option>
-            <option value="tuneMary">Mary Had a Little Lamb</option>
-            <option value="tuneJingle">Jingle Bells</option>
+            <option value="tuneFrere">💤 Frère Jacques</option>
+            <option value="tuneTwinkle">✨ Twinkle Twinkle Little Star</option>
+            <option value="tuneRow">🛶 Row Row Row Your Boat</option>
+            <option value="tuneMary">🐑 Mary Had a Little Lamb</option>
+            <option value="tuneJingle">☃️ Jingle Bells</option>
           </select>
         </div>
 
