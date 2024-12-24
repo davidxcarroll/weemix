@@ -50,6 +50,7 @@ const WeemixApp = () => {
             <option value="topicAnimals">Animals</option>
             <option value="topicSports">Sports</option>
             <option value="topicFood">Food</option>
+            <option value="topicOffice">The Office</option>
             <option value="topicStarWars">Star Wars</option>
             <option value="topicChristmas">Christmas</option>
           </select>

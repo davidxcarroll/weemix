@@ -256,6 +256,20 @@ export const songTemplates = {
         "rhinoceros", "alligator", "salamander", "caterpillar", "armadillo", "tarantula"
       ]
     },
+    office: {
+      1: [
+        "Jim", "Pam", "Mose", "Schrute", "Mike", "Dwight", "beet", "sale", "bears", "prank", "Scott", "Vance", "Roy", "Creed"
+      ],
+      2: [
+        "Michael", "Stanley", "paper", "Dunder", "warehouse", "Ryan", "parkour", "Chili's", "Darryl", "Mifflin", "Scranton", "Kevin", "Oscar", "Andy", "Kelly", "Toby", "office", "stapler", "jello"
+      ],
+      3: [
+        "manager", "Angela", "accountant", "Stamford", "harassment"
+      ],
+      4: [
+        "receptionist", "diversity", "conference-room"
+      ]
+    },
     starwars: {
       1: [
         "Sith", "Luke", "Han", "Ben", "droid", "ship", "force", "light", "dark", "blast", "space", "Hoth"
