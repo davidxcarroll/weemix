@@ -4,7 +4,7 @@ import { songTemplates } from './data/songData';
 import './App.css';
 
 const WeemixApp = () => {
-  const [topic, setTopic] = useState('topicAnything');
+  const [topic, setTopic] = useState('topicAnimals');
   const [tune, setTune] = useState('tuneFrere');
   const [currentLyrics, setCurrentLyrics] = useState([]);
 
@@ -71,7 +71,7 @@ const WeemixApp = () => {
           </select>
         </div>
 
-          <div className="flex items-center justify-center max-h-10 rounded-3xl border-2 border-white dark:border-black px-2 py-1 cursor-pointer" onClick={mix}>
+          <div className="flex items-center justify-center rounded-3xl border-2 border-white dark:border-black px-2 py-1 cursor-pointer" onClick={mix}>
             <span className="material-symbols-rounded md:!text-3xl !text-xl">autorenew</span>
           </div>
 
