@@ -10,14 +10,13 @@ const WeemixApp = () => {
   const [accentColor, setAccentColor] = useState('blue');
 
   const colorOptions = [
-    { name: 'Blue', value: 'blue' },
-    { name: 'Red', value: 'red' },
-    { name: 'Green', value: 'green' },
-    { name: 'Purple', value: 'purple' },
-    { name: 'Pink', value: 'pink' },
-    { name: 'Orange', value: 'orange' },
-    { name: 'Teal', value: 'teal' },
-    { name: 'Yellow', value: 'yellow' }
+    { name: '💙 Blue', value: 'blue' },
+    { name: '💜 Purple', value: 'purple' },
+    { name: '🩷 Pink', value: 'pink' },
+    { name: '❤️ Red', value: 'red' },
+    { name: '🧡 Orange', value: 'orange' },
+    { name: '💛 Yellow', value: 'yellow' },
+    { name: '💚 Green', value: 'green' },
   ];
 
   useEffect(() => {
@@ -45,14 +44,14 @@ const WeemixApp = () => {
     <div className="flex md:flex-col flex-col-reverse w-screen h-[100dvh] min-h-[-webkit-fill-available] bg-white dark:bg-black font-pangram uppercase overflow-y-auto">
 
       <div className={`flex flex-row flex-wrap md:gap-2 gap-1 justify-center items-center w-full md:p-4 p-2 text-white dark:text-black md:text-2xl text-base max-md:px-0 overflow-y-auto ${accentColor === 'blue' ? 'bg-blue-500' :
-          accentColor === 'red' ? 'bg-red-500' :
-            accentColor === 'green' ? 'bg-green-500' :
-              accentColor === 'purple' ? 'bg-purple-500' :
-                accentColor === 'pink' ? 'bg-pink-500' :
-                  accentColor === 'orange' ? 'bg-orange-500' :
-                    accentColor === 'teal' ? 'bg-teal-500' :
-                      accentColor === 'yellow' ? 'bg-yellow-500' :
-                        'bg-blue-500' // default fallback
+        accentColor === 'red' ? 'bg-red-500' :
+          accentColor === 'green' ? 'bg-green-500' :
+            accentColor === 'purple' ? 'bg-purple-500' :
+              accentColor === 'pink' ? 'bg-pink-500' :
+                accentColor === 'orange' ? 'bg-orange-500' :
+                  accentColor === 'teal' ? 'bg-teal-500' :
+                    accentColor === 'yellow' ? 'bg-yellow-500' :
+                      'bg-blue-500' // default fallback
         }`}>
 
         {/* <label className="md:leading-6 leading-5 text-center">Sing about</label> */}
@@ -104,13 +103,9 @@ const WeemixApp = () => {
 
         <div className="flex flex-row flex-wrap md:gap-2 gap-1 justify-center items-center">
 
-          <div className="md:w-12 w-10 md:h-12 h-10 flex items-center justify-center rounded-3xl border-2 border-white dark:border-black px-2 py-1 cursor-pointer" onClick={mix}>
-            <span className="material-symbols-rounded md:!text-3xl !text-xl">autorenew</span>
-          </div>
-
           <div className="relative">
             <div className="md:w-12 w-10 md:h-12 h-10 flex items-center justify-center rounded-3xl border-2 border-white dark:border-black px-2 py-1 cursor-pointer">
-              <span className="material-symbols-rounded md:!text-3xl !text-xl">palette</span>
+              <span className="material-symbols-rounded md:!text-3xl !text-xl">invert_colors</span>
             </div>
             <select
               className="absolute inset-0 opacity-0 cursor-pointer w-full"
@@ -123,6 +118,10 @@ const WeemixApp = () => {
                 </option>
               ))}
             </select>
+          </div>
+
+          <div className="md:w-12 w-10 md:h-12 h-10 flex items-center justify-center rounded-3xl border-2 border-white dark:border-black px-2 py-1 cursor-pointer" onClick={mix}>
+            <span className="material-symbols-rounded md:!text-3xl !text-xl">autorenew</span>
           </div>
 
         </div>
