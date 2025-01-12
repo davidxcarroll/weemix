@@ -1,4 +1,5 @@
-import { songTemplates, wordCollections } from '../data/songData';
+import { wordCollections } from '../data/topics';
+import { songTemplates } from '../data/tunes';
 
 export const getRandomWord = (theme, syllableCount) => {
   if (theme === 'anything') {
@@ -7,19 +8,26 @@ export const getRandomWord = (theme, syllableCount) => {
       .map(category => wordCollections[category][syllableCount] || [])
       .flat();
 
-    // Return a random word from the combined array
+    // Return a random word from all words
     return allWords.length > 0 
       ? allWords[Math.floor(Math.random() * allWords.length)]
       : `[${syllableCount}-syllable word]`;
   }
 
-  // Original behavior for specific themes
+  // Handle specific themes
   const themeWords = wordCollections[theme];
   if (!themeWords || !themeWords[syllableCount]) {
     return `[${syllableCount}-syllable ${theme} word]`;
   }
-  const words = themeWords[syllableCount];
-  return words[Math.floor(Math.random() * words.length)];
+  
+  const availableWords = themeWords[syllableCount];
+  
+  // If no words exist for this syllable count, return placeholder
+  if (availableWords.length === 0) {
+    return `[${syllableCount}-syllable ${theme} word]`;
+  }
+  
+  return availableWords[Math.floor(Math.random() * availableWords.length)];
 };
 
 export const generateLyrics = (songId, theme) => {
@@ -27,7 +35,7 @@ export const generateLyrics = (songId, theme) => {
   if (!song) return [];
 
   const lyrics = [];
-  const wordMap = new Map();
+  const wordMap = new Map();  // For tracking words that should intentionally repeat
   let wordCounter = 1;
 
   // Handle nested array pattern
@@ -41,6 +49,7 @@ export const generateLyrics = (songId, theme) => {
       let word;
       
       if (part.wordKey) {
+        // If wordKey exists, handle intentional repetition
         if (wordMap.has(part.wordKey)) {
           word = wordMap.get(part.wordKey);
         } else {
@@ -48,6 +57,7 @@ export const generateLyrics = (songId, theme) => {
           wordMap.set(part.wordKey, word);
         }
       } else {
+        // For words without wordKey, just get a random word
         const key = `word_${wordCounter++}`;
         word = getRandomWord(theme, part.syllables);
         wordMap.set(key, word);
