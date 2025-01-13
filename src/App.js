@@ -19,6 +19,7 @@ const WeemixApp = () => {
     { name: '🍄 Mario', value: 'mario' },
     { name: '☁️ Pixar', value: 'pixar' },
     { name: '🧙‍♂️ Harry Potter', value: 'harry' },
+    { name: '📄 The Office', value: 'office' },
     { name: '👹 Anything', value: 'anything' }
   ];
 
@@ -33,7 +34,7 @@ const WeemixApp = () => {
   const colors = [
     { name: '💙', value: 'blue' },
     { name: '💜', value: 'purple' },
-    { name: '🩷', value: 'pink' },
+    { name: '🩷', value: 'fuchsia' },
     { name: '❤️', value: 'red' },
     { name: '🧡', value: 'orange' },
     { name: '💛', value: 'yellow' },
@@ -66,7 +67,7 @@ const WeemixApp = () => {
               accentColor === 'red' ? 'text-red-500' :
               accentColor === 'green' ? 'text-green-500' : 
               accentColor === 'purple' ? 'text-purple-500' :
-              accentColor === 'pink' ? 'text-pink-500' :
+              accentColor === 'pink' ? 'text-fuchsia-500' :
               accentColor === 'orange' ? 'text-orange-500' :
               accentColor === 'yellow' ? 'text-yellow-500' :
               'text-blue-500'
@@ -95,7 +96,7 @@ const WeemixApp = () => {
           accentColor === 'red' ? 'bg-red-500/90' :
           accentColor === 'green' ? 'bg-green-500/90' :
           accentColor === 'purple' ? 'bg-purple-500/90' :
-          accentColor === 'pink' ? 'bg-pink-500/90' :
+          accentColor === 'pink' ? 'bg-fuchsia-500/90' :
           accentColor === 'orange' ? 'bg-orange-500/90' :
           accentColor === 'yellow' ? 'bg-yellow-500/90' :
           'bg-blue-500/90'
@@ -155,15 +156,15 @@ const WeemixApp = () => {
         <div 
           onClick={() => setIsModalOpen(true)}
           className={`
-            w-full flex items-center justify-center gap-2 rounded-full cursor-pointer
-            md:pl-10 pl-5 md:pr-8 pr-3
+            w-full flex items-center justify-center sm:gap-3 gap-2 rounded-full cursor-pointer
+            md:pl-10 pl-5 md:pr-8 pr-4
             lg:text-3xl md:text-2xl sm:text-xl text-lg
             xl:py-6 md:py-4 py-2
             ${accentColor === 'blue' ? 'bg-blue-500' :
               accentColor === 'red' ? 'bg-red-500' :
               accentColor === 'green' ? 'bg-green-500' :
               accentColor === 'purple' ? 'bg-purple-500' :
-              accentColor === 'pink' ? 'bg-pink-500' :
+              accentColor === 'pink' ? 'bg-fuchsia-500' :
               accentColor === 'orange' ? 'bg-orange-500' :
               accentColor === 'yellow' ? 'bg-yellow-500' :
               'bg-blue-500'
@@ -185,7 +186,7 @@ const WeemixApp = () => {
               accentColor === 'red' ? 'bg-red-500' :
               accentColor === 'green' ? 'bg-green-500' :
               accentColor === 'purple' ? 'bg-purple-500' :
-              accentColor === 'pink' ? 'bg-pink-500' :
+              accentColor === 'pink' ? 'bg-fuchsia-500' :
               accentColor === 'orange' ? 'bg-orange-500' :
               accentColor === 'yellow' ? 'bg-yellow-500' :
               'bg-blue-500'
@@ -194,6 +195,7 @@ const WeemixApp = () => {
         >
           <span className="material-symbols-rounded md:!text-3xl !text-2xl">autorenew</span>
         </div>
+        
       </div>
 
       {/* Lyrics */}
@@ -205,7 +207,7 @@ const WeemixApp = () => {
           accentColor === 'red' ? 'text-red-500' :
           accentColor === 'green' ? 'text-green-500' :
           accentColor === 'purple' ? 'text-purple-500' :
-          accentColor === 'pink' ? 'text-pink-500' :
+          accentColor === 'pink' ? 'text-fuchsia-500' :
           accentColor === 'orange' ? 'text-orange-500' :
           accentColor === 'yellow' ? 'text-yellow-500' :
           'text-blue-500'
