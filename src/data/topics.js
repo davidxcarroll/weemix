@@ -103,7 +103,7 @@ export const wordCollections = {
       "Toy", "Buzz", "Up", "Mike", "Boo", "Hamm", "Rex"
     ],
     2: [
-      "Lightyear", "Story", "Woody", "Wall-E", "Lightning", "Mater", "Nemo", "Dory", "Marlin", "Sulley", "Andy", "Jessie"
+      "Lightyear", "Story", "Woody", "Wall•E", "Lightning", "Mater", "Nemo", "Dory", "Marlin", "Sulley", "Andy", "Jessie"
     ],
     3: [
       "Monsters Inc", "Slinky-Dog"
