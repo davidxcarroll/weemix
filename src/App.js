@@ -26,9 +26,9 @@ const WeemixApp = () => {
   const tunes = [
     { name: '💤 Frère Jacques', value: 'tuneFrere' },
     { name: '✨ Twinkle Twinkle', value: 'tuneTwinkle' },
-    { name: '🛶 Row Row Row', value: 'tuneRow' },
-    { name: '🐑 Mary Little Lamb', value: 'tuneMary' },
-    { name: '🥐 Hot Cross Buns', value: 'tuneBuns' }
+    { name: '🛶 Row Boat', value: 'tuneRow' },
+    { name: '🐑 Mary Lamb', value: 'tuneMary' },
+    { name: '🥐 Hot Buns', value: 'tuneBuns' }
   ];
 
   const colors = [
@@ -56,22 +56,22 @@ const WeemixApp = () => {
   };
 
   const renderButton = (item, currentValue, setter, category) => (
-    <div 
+    <div
       key={`${category}-${item.value}`}
       onClick={() => setter(item.value)}
       className={`
-        cursor-pointer whitespace-nowrap rounded-full md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-3
-        ${currentValue === item.value 
+        cursor-pointer whitespace-nowrap rounded-full md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-2
+        ${currentValue === item.value
           ? 'bg-white ' + (
-              accentColor === 'blue' ? 'text-blue-500' :
+            accentColor === 'blue' ? 'text-blue-500' :
               accentColor === 'red' ? 'text-red-500' :
-              accentColor === 'green' ? 'text-green-500' : 
-              accentColor === 'purple' ? 'text-purple-500' :
-              accentColor === 'pink' ? 'text-fuchsia-500' :
-              accentColor === 'orange' ? 'text-orange-500' :
-              accentColor === 'yellow' ? 'text-yellow-500' :
-              'text-blue-500'
-            )
+                accentColor === 'green' ? 'text-green-500' :
+                  accentColor === 'purple' ? 'text-purple-500' :
+                    accentColor === 'pink' ? 'text-fuchsia-500' :
+                      accentColor === 'orange' ? 'text-orange-500' :
+                        accentColor === 'yellow' ? 'text-yellow-500' :
+                          'text-blue-500'
+          )
           : 'text-white bg-white/20'
         }
       `}
@@ -94,55 +94,59 @@ const WeemixApp = () => {
         transition-[background] duration-1000 ease-in-out
         ${accentColor === 'blue' ? 'bg-blue-500/90' :
           accentColor === 'red' ? 'bg-red-500/90' :
-          accentColor === 'green' ? 'bg-green-500/90' :
-          accentColor === 'purple' ? 'bg-purple-500/90' :
-          accentColor === 'pink' ? 'bg-fuchsia-500/90' :
-          accentColor === 'orange' ? 'bg-orange-500/90' :
-          accentColor === 'yellow' ? 'bg-yellow-500/90' :
-          'bg-blue-500/90'
+            accentColor === 'green' ? 'bg-green-500/90' :
+              accentColor === 'purple' ? 'bg-purple-500/90' :
+                accentColor === 'pink' ? 'bg-fuchsia-500/90' :
+                  accentColor === 'orange' ? 'bg-orange-500/90' :
+                    accentColor === 'yellow' ? 'bg-yellow-500/90' :
+                      'bg-blue-500/90'
         }`}
       >
 
-          {/* Topics */}
-          <div className="w-full flex flex-row flex-wrap items-center justify-center gap-1">
-            <div className={`
+        {/* Colors */}
+        <div className="w-full flex flex-row flex-wrap items-center justify-center gap-1">
+          {/* <div className={`
+    w-fit h-fit bg-white md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-3 rounded-full whitespace-nowrap
+    `}
+  >
+    🎨
+  </div> */}
+          {colors.map(c => renderButton(c, accentColor, setAccentColor, 'color'))}
+        </div>
+
+        Sing about
+
+        {/* Topics */}
+        <div className="w-full flex flex-row flex-wrap items-center justify-center gap-1">
+          {/* <div className={`
               w-fit h-fit bg-white md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-3 rounded-full whitespace-nowrap
               `}
             >
-              ❓
-            </div>
-            {topics.map(t => renderButton(t, topic, setTopic, 'topic'))}
-          </div>
+              🌐
+            </div> */}
+          {topics.map(t => renderButton(t, topic, setTopic, 'topic'))}
+        </div>
 
-          {/* Tunes */}
-          <div className="w-full flex flex-row flex-wrap items-center justify-center gap-1">
-            <div className={`
+        to the tune of
+
+        {/* Tunes */}
+        <div className="w-full flex flex-row flex-wrap items-center justify-center gap-1">
+          {/* <div className={`
               w-fit h-fit bg-white md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-3 rounded-full whitespace-nowrap
               `}
             >
               🎵
-            </div>
-            {tunes.map(t => renderButton(t, tune, setTune, 'tune'))}
-          </div>
+            </div> */}
+          {tunes.map(t => renderButton(t, tune, setTune, 'tune'))}
+        </div>
 
-          {/* Colors */}
-          <div className="w-full flex flex-row flex-wrap items-center justify-center gap-1">
-            <div className={`
-              w-fit h-fit bg-white md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-3 rounded-full whitespace-nowrap
-              `}
-            >
-              🎨
-            </div>
-            {colors.map(c => renderButton(c, accentColor, setAccentColor, 'color'))}
-          </div>
-
-          {/* Sing button */}
-          <div 
-            onClick={handleSing}
-            className="w-full flex items-center justify-center text-white bg-black xl:py-6 md:py-4 py-2 rounded-t-full whitespace-nowrap cursor-pointer"
-          >
-            Sing!
-          </div>
+        {/* Sing button */}
+        <div
+          onClick={handleSing}
+          className="w-full flex items-center justify-center text-white bg-black xl:py-6 md:py-4 py-2 rounded-t-full whitespace-nowrap cursor-pointer"
+        >
+          Sing!
+        </div>
 
       </div>
 
@@ -153,7 +157,7 @@ const WeemixApp = () => {
         `}
       >
 
-        <div 
+        <div
           onClick={() => setIsModalOpen(true)}
           className={`
             w-full flex items-center justify-center sm:gap-3 gap-2 rounded-full cursor-pointer
@@ -162,12 +166,12 @@ const WeemixApp = () => {
             xl:py-6 md:py-4 py-2
             ${accentColor === 'blue' ? 'bg-blue-500' :
               accentColor === 'red' ? 'bg-red-500' :
-              accentColor === 'green' ? 'bg-green-500' :
-              accentColor === 'purple' ? 'bg-purple-500' :
-              accentColor === 'pink' ? 'bg-fuchsia-500' :
-              accentColor === 'orange' ? 'bg-orange-500' :
-              accentColor === 'yellow' ? 'bg-yellow-500' :
-              'bg-blue-500'
+                accentColor === 'green' ? 'bg-green-500' :
+                  accentColor === 'purple' ? 'bg-purple-500' :
+                    accentColor === 'pink' ? 'bg-fuchsia-500' :
+                      accentColor === 'orange' ? 'bg-orange-500' :
+                        accentColor === 'yellow' ? 'bg-yellow-500' :
+                          'bg-blue-500'
             }
             `}
         >
@@ -178,24 +182,24 @@ const WeemixApp = () => {
         </div>
 
         {/* Mix button */}
-        <div 
+        <div
           onClick={mix}
           className={`
             h-full max-h-20 aspect-square flex items-center justify-center rounded-full px-2 py-1 cursor-pointer
             ${accentColor === 'blue' ? 'bg-blue-500' :
               accentColor === 'red' ? 'bg-red-500' :
-              accentColor === 'green' ? 'bg-green-500' :
-              accentColor === 'purple' ? 'bg-purple-500' :
-              accentColor === 'pink' ? 'bg-fuchsia-500' :
-              accentColor === 'orange' ? 'bg-orange-500' :
-              accentColor === 'yellow' ? 'bg-yellow-500' :
-              'bg-blue-500'
+                accentColor === 'green' ? 'bg-green-500' :
+                  accentColor === 'purple' ? 'bg-purple-500' :
+                    accentColor === 'pink' ? 'bg-fuchsia-500' :
+                      accentColor === 'orange' ? 'bg-orange-500' :
+                        accentColor === 'yellow' ? 'bg-yellow-500' :
+                          'bg-blue-500'
             }
             `}
         >
           <span className="material-symbols-rounded md:!text-3xl !text-2xl">autorenew</span>
         </div>
-        
+
       </div>
 
       {/* Lyrics */}
@@ -205,12 +209,12 @@ const WeemixApp = () => {
         xl:leading-12 lg:leading-10 md:leading-8 sm:leading-6 leading-5
         ${accentColor === 'blue' ? 'text-blue-500' :
           accentColor === 'red' ? 'text-red-500' :
-          accentColor === 'green' ? 'text-green-500' :
-          accentColor === 'purple' ? 'text-purple-500' :
-          accentColor === 'pink' ? 'text-fuchsia-500' :
-          accentColor === 'orange' ? 'text-orange-500' :
-          accentColor === 'yellow' ? 'text-yellow-500' :
-          'text-blue-500'
+            accentColor === 'green' ? 'text-green-500' :
+              accentColor === 'purple' ? 'text-purple-500' :
+                accentColor === 'pink' ? 'text-fuchsia-500' :
+                  accentColor === 'orange' ? 'text-orange-500' :
+                    accentColor === 'yellow' ? 'text-yellow-500' :
+                      'text-blue-500'
         }`}
       >
         {currentLyrics.map((line, index) => (
