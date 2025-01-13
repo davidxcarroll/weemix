@@ -67,7 +67,7 @@ const WeemixApp = () => {
               accentColor === 'red' ? 'text-red-500' :
                 accentColor === 'green' ? 'text-green-500' :
                   accentColor === 'purple' ? 'text-purple-500' :
-                    accentColor === 'pink' ? 'text-fuchsia-500' :
+                    accentColor === 'fuchsia' ? 'text-fuchsia-500' :
                       accentColor === 'orange' ? 'text-orange-500' :
                         accentColor === 'yellow' ? 'text-yellow-500' :
                           'text-blue-500'
@@ -96,7 +96,7 @@ const WeemixApp = () => {
           accentColor === 'red' ? 'bg-red-500/90' :
             accentColor === 'green' ? 'bg-green-500/90' :
               accentColor === 'purple' ? 'bg-purple-500/90' :
-                accentColor === 'pink' ? 'bg-fuchsia-500/90' :
+                accentColor === 'fuchsia' ? 'bg-fuchsia-500/90' :
                   accentColor === 'orange' ? 'bg-orange-500/90' :
                     accentColor === 'yellow' ? 'bg-yellow-500/90' :
                       'bg-blue-500/90'
@@ -168,7 +168,7 @@ const WeemixApp = () => {
               accentColor === 'red' ? 'bg-red-500' :
                 accentColor === 'green' ? 'bg-green-500' :
                   accentColor === 'purple' ? 'bg-purple-500' :
-                    accentColor === 'pink' ? 'bg-fuchsia-500' :
+                    accentColor === 'fuchsia' ? 'bg-fuchsia-500' :
                       accentColor === 'orange' ? 'bg-orange-500' :
                         accentColor === 'yellow' ? 'bg-yellow-500' :
                           'bg-blue-500'
@@ -190,7 +190,7 @@ const WeemixApp = () => {
               accentColor === 'red' ? 'bg-red-500' :
                 accentColor === 'green' ? 'bg-green-500' :
                   accentColor === 'purple' ? 'bg-purple-500' :
-                    accentColor === 'pink' ? 'bg-fuchsia-500' :
+                    accentColor === 'fuchsia' ? 'bg-fuchsia-500' :
                       accentColor === 'orange' ? 'bg-orange-500' :
                         accentColor === 'yellow' ? 'bg-yellow-500' :
                           'bg-blue-500'
@@ -211,7 +211,7 @@ const WeemixApp = () => {
           accentColor === 'red' ? 'text-red-500' :
             accentColor === 'green' ? 'text-green-500' :
               accentColor === 'purple' ? 'text-purple-500' :
-                accentColor === 'pink' ? 'text-fuchsia-500' :
+                accentColor === 'fuchsia' ? 'text-fuchsia-500' :
                   accentColor === 'orange' ? 'text-orange-500' :
                     accentColor === 'yellow' ? 'text-yellow-500' :
                       'text-blue-500'
