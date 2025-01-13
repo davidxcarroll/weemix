@@ -3,11 +3,11 @@ import { songTemplates } from '../data/tunes';
 
 export const getRandomWord = (theme, syllableCount) => {
   if (theme === 'anything') {
-    // Collect all words with matching syllable count from all categories
-    const allWords = ['animals', 'starwars', 'food']
+    // Collect all words with matching syllable count from ALL categories
+    const allWords = Object.keys(wordCollections)
       .map(category => wordCollections[category][syllableCount] || [])
       .flat();
-
+  
     // Return a random word from all words
     return allWords.length > 0 
       ? allWords[Math.floor(Math.random() * allWords.length)]
