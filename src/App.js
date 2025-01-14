@@ -61,7 +61,7 @@ const WeemixApp = () => {
       onClick={() => setter(item.value)}
       className={`
         flex flex-1 items-center justify-center cursor-pointer whitespace-nowrap 
-        rounded-full md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-2 -mx-1
+        rounded-full md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-2
         ${currentValue === item.value 
           ? `bg-white ${getColorClass('text', accentColor)}` 
           : 'text-white bg-white/20'
