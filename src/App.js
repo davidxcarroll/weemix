@@ -64,7 +64,7 @@ const WeemixApp = () => {
         rounded-full md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-2
         ${currentValue === item.value 
           ? `bg-white`
-          : 'text-white bg-black/10'
+          : 'bg-white/50'
         }
       `}
     >
@@ -118,7 +118,7 @@ const WeemixApp = () => {
 
       {/* Nav */}
       <div className={`
-        w-full flex flex-row justify-center items-center gap-1
+        w-full flex flex-row justify-center items-start gap-1
         text-white dark:text-black max-md:px-0
         `}
       >
@@ -131,7 +131,7 @@ const WeemixApp = () => {
             w-full flex items-center justify-center sm:gap-8 gap-1 rounded-full cursor-pointer
             md:pr-10 pr-3 md:pl-8 pl-4
             xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-lg
-            xl:py-6 md:py-4 py-2
+            xl:py-12 lg:py-8 md:py-6 sm:py-4 py-2
           `}
         >
           <span className="material-symbols-rounded md:!text-3xl !text-2xl">tune</span>
@@ -146,7 +146,7 @@ const WeemixApp = () => {
           color={accentColor}
           type="bg"
           className={`
-            h-full max-h-20 aspect-square flex items-center justify-center rounded-full px-2 py-1 cursor-pointer
+            h-full max-sm:max-h-16 aspect-square flex items-center justify-center rounded-full px-2 py-1 cursor-pointer
           `}
         >
           <span className="material-symbols-rounded md:!text-3xl !text-2xl">autorenew</span>
@@ -156,7 +156,7 @@ const WeemixApp = () => {
 
       {/* Lyrics */}
       <div className={`
-        lyrics flex flex-1 flex-col justify-evenly w-full md:p-8 p-2 overflow-y-auto
+        lyrics flex flex-1 flex-col justify-evenly w-full overflow-y-auto
         xl:text-6xl lg:text-5xl md:text-4xl text-3xl
         xl:leading-[3rem] lg:leading-10 md:leading-9 leading-7
         ${getColorClass('text', accentColor)}`}
