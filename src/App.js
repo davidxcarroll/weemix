@@ -63,8 +63,8 @@ const WeemixApp = () => {
         flex flex-1 items-center justify-center cursor-pointer whitespace-nowrap 
         rounded-full md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-2
         ${currentValue === item.value 
-          ? `bg-white ${getColorClass('text', accentColor)}` 
-          : 'text-white bg-white/20'
+          ? `bg-white`
+          : 'text-white bg-black/10'
         }
       `}
     >
@@ -73,16 +73,16 @@ const WeemixApp = () => {
   );
 
   return (
-    <div className="relative flex flex-col-reverse w-screen h-[100dvh] min-h-[-webkit-fill-available] bg-white dark:bg-black font-pangram uppercase overflow-y-auto">
+    <div className="relative flex flex-col-reverse w-screen h-[100dvh] min-h-[-webkit-fill-available] p-1 bg-white dark:bg-black font-pangram uppercase overflow-y-auto">
 
       {/* Modal */}
       <AccentElement
         color={accentColor}
         type="bgOpacity"
         className={`
-          w-full h-full
+          w-full h-full p-1 pb-0
           ${isModalOpen ? 'flex' : 'hidden'}
-          flex-row flex-wrap justify-center
+          flex-row flex-wrap justify-center gap-1
           absolute top-0 left-0 z-50
           backdrop-blur-sm overflow-auto
           xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-lg
@@ -116,9 +116,9 @@ const WeemixApp = () => {
 
       </AccentElement>
 
-      {/* Header */}
+      {/* Nav */}
       <div className={`
-        flex flex-row justify-center items-center w-full
+        w-full flex flex-row justify-center items-center gap-1
         text-white dark:text-black max-md:px-0
         `}
       >
