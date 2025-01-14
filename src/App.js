@@ -60,7 +60,9 @@ const WeemixApp = () => {
       key={`${category}-${item.value}`}
       onClick={() => setter(item.value)}
       className={`
-        cursor-pointer whitespace-nowrap rounded-full md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-2
+        flex self-stretch items-center justify-center cursor-pointer whitespace-nowrap rounded-full
+        md:py-3 sm:py-2 py-1
+        md:px-6 sm:px-5 px-4
         ${currentValue === item.value
           ? 'bg-white ' + (
             accentColor === 'blue' ? 'text-blue-500' :
@@ -87,10 +89,10 @@ const WeemixApp = () => {
       <div className={`
         w-full h-full
         ${isModalOpen ? 'flex' : 'hidden'}
-        flex-row flex-wrap items-end justify-center
+        flex-row flex-wrap justify-center gap-1
         absolute top-0 left-0 z-50
         backdrop-blur-sm overflow-auto
-        xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-lg
+        xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-lg
         transition-[background] duration-1000 ease-in-out
         ${accentColor === 'blue' ? 'bg-blue-500/90' :
           accentColor === 'red' ? 'bg-red-500/90' :
@@ -103,42 +105,15 @@ const WeemixApp = () => {
         }`}
       >
 
-        {/* Colors */}
-        <div className="w-full flex flex-row flex-wrap items-center justify-center gap-1">
-          {/* <div className={`
-    w-fit h-fit bg-white md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-3 rounded-full whitespace-nowrap
-    `}
-  >
-    🎨
-  </div> */}
-          {colors.map(c => renderButton(c, accentColor, setAccentColor, 'color'))}
-        </div>
+        {colors.map(c => renderButton(c, accentColor, setAccentColor, 'color'))}
 
-        Sing about
+        <div className="w-full flex justify-center items-center">Sing about</div>
 
-        {/* Topics */}
-        <div className="w-full flex flex-row flex-wrap items-center justify-center gap-1">
-          {/* <div className={`
-              w-fit h-fit bg-white md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-3 rounded-full whitespace-nowrap
-              `}
-            >
-              🌐
-            </div> */}
-          {topics.map(t => renderButton(t, topic, setTopic, 'topic'))}
-        </div>
+        {topics.map(t => renderButton(t, topic, setTopic, 'topic'))}
 
-        to the tune of
+        <div className="w-full flex justify-center items-center">to the tune of</div>
 
-        {/* Tunes */}
-        <div className="w-full flex flex-row flex-wrap items-center justify-center gap-1">
-          {/* <div className={`
-              w-fit h-fit bg-white md:py-3 sm:py-2 py-1 md:px-6 sm:px-4 px-3 rounded-full whitespace-nowrap
-              `}
-            >
-              🎵
-            </div> */}
-          {tunes.map(t => renderButton(t, tune, setTune, 'tune'))}
-        </div>
+        {tunes.map(t => renderButton(t, tune, setTune, 'tune'))}
 
         {/* Sing button */}
         <div
