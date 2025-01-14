@@ -90,7 +90,7 @@ const WeemixApp = () => {
         flex-row flex-wrap items-end justify-center
         absolute top-0 left-0 z-50
         backdrop-blur-sm overflow-auto
-        lg:text-3xl md:text-2xl sm:text-xl text-lg
+        xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-lg
         transition-[background] duration-1000 ease-in-out
         ${accentColor === 'blue' ? 'bg-blue-500/90' :
           accentColor === 'red' ? 'bg-red-500/90' :
@@ -162,7 +162,7 @@ const WeemixApp = () => {
           className={`
             w-full flex items-center justify-center sm:gap-8 gap-1 rounded-full cursor-pointer
             md:pr-10 pr-3 md:pl-8 pl-4
-            lg:text-3xl md:text-2xl sm:text-xl text-lg
+            xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-lg
             xl:py-6 md:py-4 py-2
             ${accentColor === 'blue' ? 'bg-blue-500' :
               accentColor === 'red' ? 'bg-red-500' :
@@ -206,7 +206,7 @@ const WeemixApp = () => {
       <div className={`
         lyrics flex flex-1 flex-col justify-evenly w-full md:p-8 p-2 overflow-y-auto
         xl:text-6xl lg:text-5xl md:text-4xl text-3xl
-        xl:leading-12 lg:leading-10 md:leading-9 leading-7
+        xl:leading-[3rem] lg:leading-10 md:leading-9 leading-7
         ${accentColor === 'blue' ? 'text-blue-500' :
           accentColor === 'red' ? 'text-red-500' :
             accentColor === 'green' ? 'text-green-500' :

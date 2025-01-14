@@ -61,7 +61,7 @@ export const wordCollections = {
       "ball", "bat", "goal", "run", "kick", "throw", "Babe", "catch", "pass", "shot", "score", "team", "game", "pitch", "hit", "serve", "spike", "swim", "race", "jump", "dive"
     ],
     2: [
-      "baseball", "football", "soccer", "tennis", "pick-6", "rugby", "dribble", "Jordan", "red-card", "Gretzky", "hockey", "player", "pitcher", "catcher", "goalie", "tackle", "touchdown"
+      "baseball", "football", "soccer", "tennis", "rugby", "dribble", "Jordan", "red-card", "Gretzky", "hockey", "player", "pitcher", "catcher", "goalie", "tackle", "touchdown"
     ],
     3: [
       "volleyball", "gymnastics", "alley-oop", "marathon", "crossover", "penalty", "yellow-card", "badminton", "basketball", "referee", "umpire", "penalty", "victory", "tournament", "champion", "stadium", "uniform"

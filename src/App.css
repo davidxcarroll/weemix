@@ -25,6 +25,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
+/* NOTO EMOJI */
+
+.noto-emoji {
+  font-family: "Noto Emoji", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 html {
   height: -webkit-fill-available;
 }
